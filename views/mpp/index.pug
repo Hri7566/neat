@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/css/names.css")
+    body(style="background: radial-gradient(at center center, rgb(59, 80, 84) 0%, rgb(0, 16, 20) 100%);")
+        h1 #{title}
+        div(id="home-link")
+            a(href="/") Home
+        div(id="db-online")
+            | The database is
+            if people
+                <span style="color:green"> online.</span>
+            else
+                <span style="color:red"> offline.</span>
+        div(id="status")
+            span(class="number") #{pcount}
+            |  people are currently in the room
+        br
+        br
+        h2 List of RP Room affiliates:
+        div(id="names")
+            each person in people
+                if person.owner == true
+                    div(class="name" style={background: person.color})=person.name
+                        div(class="info" style={background: person.color})=person._id
+                        div(class="menu-item" style={background: person.color})=person.color
+                        div(class="menu-item" style={background: person.color}) Trusted: <span style="color:green">true</p>
+                else
+                    div(class="name" style={background: person.color})=person.name
+                        div(class="info" style={background: person.color})=person._id
+                        div(class="menu-item" style={background: person.color}) Color: #{person.color}
+                        div(class="menu-item" style={background: person.color}) Trusted: <span style="color:red">false</p>

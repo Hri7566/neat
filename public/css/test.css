@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(rgb(59, 80, 84) 0%, rgb(0, 16, 20) 100%);
+    font: 20pt Verdana;
+    color: white;
+    text-shadow: #444 1px 1px;
+}
+
+#container {
+    align-items: center;
+    margin: 0 15%;
+}
+
+#content {
+    background-color: burlywood;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 15pt;
+    width: 85%;
+}

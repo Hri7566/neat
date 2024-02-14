@@ -1,0 +1,20 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Hri7566",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.15",
+    "mpp-client-net": "^1.1.3",
+    "mpp-client-xt": "^1.3.1",
+    "pug": "^2.0.4",
+    "socketio": "^1.0.0"
+  }
+}
